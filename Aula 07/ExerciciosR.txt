@@ -1,0 +1,64 @@
+1) Qual é a saída dos seguintes comandos
+console.log(!10) False
+console.log(!!"String") True
+console.log(!!2.3) True
+console.log(Boolean(null)) False
+
+2) Qual é a saída das seguintes instruções
+console.log(10 > 2) True
+console.log(5 >= "5") True
+console.log(5 >== "5") Error
+console.log("apple" > "pineapple") False
+console.log("2" > "12") True
+console.log(undefined == null) True
+console.log(undefined === null) False
+console.log(null == "\n0\n") False
+console.log(null === +"\n0\n") False
+
+3) Escreva um script que receba uma valor A, verifique se o valor A é maior que 10 e
+mostre na tela "O valor A é maior que 10". 
+
+R:  let valorA = prompt("Digite o Valor de A")
+            if(valorA > 10  ) {
+               console.log("O Valor e Maior que 10") 
+            }
+            console.log("Programa Finalizado...")
+
+4) Escreva um script que receba um número, se esse número for par mostre na tela
+a metade do número digitado. No final do script mostrar na tela "Programa finalizado..."
+
+R: let valor = prompt("Digite um valor")
+        let total = valor/2
+        if (valor%2 == 0 ) {
+            console.log(total)
+        }
+            console.log("Programa Finalizado")
+
+5) Escreva um script que receba um número, se esse número for par mostre na tela
+"O número é par" senão mostre "O número é ímpar".
+
+R : let valor = prompt("Digite um valor")
+        let total = valor/2
+        if (valor%2 == 0 ) {
+            console.log("O número é par")
+        }else {
+            console.log("O número e impar")
+        }
+6) Escreva um script que receba um número, se esse número estiver entre 20 e 90 
+mostre na tela "O número está na faixa entre 20 e 90" senão mostre "O número
+está fora da faixa".
+
+R: let valor = prompt("Digite um valor")
+        if ( valor > 20 && valor < 90 ) {
+            console.log("O número está na faixa entre 20 e 90 ")
+        }else {
+            console.log("O número está fora da faixa")
+
+7) Considerando o valor de A = 10 e B = 20, responda a saída das seguintes expressões:        
+Boolean(a > 10 && b <= 20) // False
+Boolean(a > 10 || b <= 20) // True 
+Boolean((a === 10 || b > 20) && b === 20) // True
+console.log(null || 2 || undefined) // 2
+Boolean(0 && 1) // False
+
+

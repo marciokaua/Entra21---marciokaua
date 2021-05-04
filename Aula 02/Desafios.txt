@@ -8,20 +8,19 @@
 18)R: let pi, resul, r
         pi = 3.1415
         r = Number(prompt("Valor do Raio"))
-        r = r * r * r
-        resul = (4/3) * pi * r
+        resul = (4/3) * pi ** r
         console.log(resul.toFixed(2))
 19)R: let b, h, resul
         b = Number(prompt("Digite a Base do Triângulo"))
         h = Number(prompt("Digite a Altura do Triângulo"))
         resul = b * h /2
         console.log("A Área do Triângulo é:"+ resul)
-20)R: let preço, descont, resul, resul2
-        preço = Number(prompt("Valor do Preço"))
+20)R: let preco, descont, resul, resul2
+        preco = Number(prompt("Valor do Preço"))
         descont = Number(prompt("Valor do Desconto"))
         descont = descont / 100
-        resul = descont * preço
-        resul2 = preço - resul
+        resul = descont * preco
+        resul2 = preco - resul
         console.log("O Valor do Desconto é: "+ resul)
         console.log("O Valor do Final é: "+ resul2)
 21)R: let salarFix,comiss,totalVendas, nomeVendedor, salarFinal
