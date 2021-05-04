@@ -1,0 +1,16 @@
+Git init - inicia pasta repositoria vazia
+
+git add (e o nome da pasta)
+
+git status - mostra a situação
+
+git commit "Commit Inicial" - ultimo passo para salvar o arquivo no diretorio
+
+git config --global user.name "Marcio Kauã" - colocar nome 
+
+git config --global user.email "Marciokaua2705@gmail.com" - colocar email
+
+git clone - clona o repositorio
+
+git pull - puxa novos arquivos lançados no repositorio
+

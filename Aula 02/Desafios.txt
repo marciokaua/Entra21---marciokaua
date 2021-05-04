@@ -1,0 +1,35 @@
+17)R:let x1, x2, x3
+       x1 = Number(prompt("Digite um Numero"))
+       x2 = 1
+       x3 = 1
+       x2 = x1 - x2
+       x3 = x1 + x3
+       console.log(x2, x1, x3)
+18)R: let pi, resul, r
+        pi = 3.1415
+        r = Number(prompt("Valor do Raio"))
+        r = r * r * r
+        resul = (4/3) * pi * r
+        console.log(resul.toFixed(2))
+19)R: let b, h, resul
+        b = Number(prompt("Digite a Base do Triângulo"))
+        h = Number(prompt("Digite a Altura do Triângulo"))
+        resul = b * h /2
+        console.log("A Área do Triângulo é:"+ resul)
+20)R: let preço, descont, resul, resul2
+        preço = Number(prompt("Valor do Preço"))
+        descont = Number(prompt("Valor do Desconto"))
+        descont = descont / 100
+        resul = descont * preço
+        resul2 = preço - resul
+        console.log("O Valor do Desconto é: "+ resul)
+        console.log("O Valor do Final é: "+ resul2)
+21)R: let salarFix,comiss,totalVendas, nomeVendedor, salarFinal
+        salar = Number(prompt("Valor Fixo do Salario"))
+        comiss = 15 /100
+        nomeVendedor = prompt("Digite seu Nome")
+        totalVendas = Number(prompt("Valor Total de Vendas"))
+        comiss = comiss * totalVendas
+        salarFinal = comiss + salar
+        console.log(nomeVendedor)
+        console.log("O Valor do Salario Final é:"+ salarFinal.toFixed(2))

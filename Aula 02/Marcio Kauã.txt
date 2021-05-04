@@ -1,0 +1,83 @@
+1)  R: console.log("Oi, meu nome é Marcio Kauã!")
+2)  R: console.log("Cadastro de Funcionarios: \n 1) Cadastrar funcionário \n 2) Listar funcionários \n 3) Editar funcionário \n 4) Deletar funcionário \n 5) Sair")
+3)  R: let admin, nome 
+    nome = ("João")
+    admin = nome
+    console.log(nome)
+4)  R:let nome, idade, peso, altura, telefone
+    nome = ("Marcio Kauã")
+    idade = ("17 Anos")
+    peso = ("70 Kgs")
+    altura = ("1.70")
+    telefone = ("4799999999")
+    console.log("Nome: "+ nome)
+    console.log("Idade: "+ idade)
+    console.log("Peso: "+ peso)
+    console.log("Altura: "+ altura)
+    console.log("Telefone: "+ telefone)
+5)  R:let titulo, edição, autor, dataDePublicação
+    titulo = ("O Ladrão de Raios")
+    edição = ("1ª")
+    autor = ("Rick Riordan")
+    dataDePublicação = ("21 de Novembro de 2008")
+    console.log("Título: "+ titulo)
+    console.log("Edição: "+ edição)
+    console.log("Autor: "+ autor)
+    console.log("Data de Publicação: "+ dataDePublicação)
+6)  R:let dataDeNascimento, quantidadeDeFilhosQueUmaPessoaPossui, oUsuarioQueEstaLogadoNoSistema
+7)  let nome = "João"
+    console.log(`Olá ${1}`) // R : Olá 1
+    console.log(`Olá ${"nome"}`) // R: Olá nome
+    alert(`Olá ${nome}`) // R: Olá João
+8)  let x = 10
+    let y = 8
+    let area = (x * y) / 2 + 3 ** 4
+    console.log(area)
+    Qual é a saida de dados (output) R:121
+9)  Quais são os valores de a e x que serão exibidos no console
+let a = 2
+let x = 1 + (a *= 2)
+console.log(a, x) R: (4, 5) 
+10)  Qual é o resultado de cada operação? 
+     A) "" + 1 + 0 // R: "10"
+     B) "" - 1 + 0 // R: -1
+     C) 6 / "3" // R: 2 
+     D) "2" * "3" // R: 6
+     E) 4 + 5 + "px" // R: "9px"
+     F) "$" + 4 + 5 //  R: "$45"
+     G) "4" - 2 //      R:  2 
+11)  R:let altura, largura, area, perimetro
+     altura = prompt("Altura do Retangulo:")
+     largura = prompt("Largura do Retangulo:")
+     area = altura * largura
+     perimetro = largura * 4 
+     console.log("A Area do Retangulo é: "+ area)
+     console.log("O Perimetro do Retangulo é: "+ perimetro)
+12)  R:let x1, x2, x3
+     x1 = Number( prompt("Escolha um Numero:"))
+     x2 = Number( prompt("Escolha um Numero:"))
+     x3 = x1 + x2
+     console.log("O Resultado é: "+ x3)
+13)  R:let x1, x2, x3
+     x1 = Number( prompt("Nota1 :"))
+     x2 = Number( prompt("Nota2 :"))
+     x3 = (x1 + x2) /2
+     console.log("O Resultado é: "+ x3) 
+14)  R:let x1, x2, x3, x4, x5, x6
+     x1 = Number( prompt("Digite um NUmero:"))
+     x2 = Number( prompt("Digite um Numero:"))
+     x3 = Number(prompt("Digite um Numero:"))
+     x4 = x1 * x1
+     x5 = x2 * x2
+     x6 = x3 * x3
+     console.log("O Primeiro Resultado é: "+ x4)
+     console.log("O Segundo Resultado  é: "+ x5)
+     console.log("O Terceiro Resultado é: "+ x6)
+15)Escreva um algoritmo que armazene o valor 10 em uma variável A e o valor 20 em uma variável B. A seguir (utilizando apenas atribuições entre variáveis) 
+troque os seus conteúdos fazendo com que o valor que está em A passe para B e vice-versa. Ao final, mostrar na tela os valores que ficaram armazenados nas variáveis.
+R: (20, 20)
+16) R: let numeroDias, numeroMeses, resul
+    numeroDias = 30
+    numeroMeses = Number(prompt("Digite a Quatidade de Meses:"))
+    resul = numeroDias * numeroMeses
+    console.log("A Quatidade de dias dos Meses São: "+ resul ) 
