@@ -61,4 +61,135 @@ Boolean((a === 10 || b > 20) && b === 20) // True
 console.log(null || 2 || undefined) // 2
 Boolean(0 && 1) // False
 
+8) Escreva um script que receba três valores A, B, C. Faça as comparações necessárias para exibir
+na tela o maior valor entre os três.
+
+R: let a, b, c
+        a = prompt("Digite o valor de a")
+        b = prompt("Digite o valor de b")
+        c = prompt("Digite o valor de c")
+        if(a > b && a > c ){
+            console.log("O maior numero é"+ a)
+        }else if (b > a && b > c){
+            console.log("O maior numero é "+ b)
+        } else{
+            console.log("O maior numero é "+ c)
+        }
+
+9) Reescreva o script abaixo utilizando o operador ternário:
+
+R: let resultado, a, b
+        a = 1
+        b = 1
+
+     a + b < 4 ? resultado = "Abaixo" : resultado = "Acima"
+
+    console.log(resultado)
+
+10) Escreva	um programa que	leia as	medidas	dos	lados de um	triângulo e	
+escreva	se ele é Equilátero, Isósceles ou Escaleno.	Sendo que:
+
+R:let l1,l2,l3
+          l1 = prompt("Digite o valor do lado 1")
+          l2 = prompt("Digite o valor do lado 2")
+          l3 = prompt("Digite o valor do lado 3")
+            if ( l1 == l2 && l1 == l3){
+                console.log("Triângulo Equilatero")
+            } else if ( l2 == l3 || l1 == l3 || l2 == l1 ){
+                console.log("Triângulo Iscaleno")
+            } else if(l1 != l2 && l2 != l3 && l3 != l1) {
+                console.log("Triângulo Escaleno")
+            }
+
+11) Leia um numero fornecido pelo usuário. Se esse número for positivo, calcule a raiz
+quadrada do numero. Se o número for negativo, mostre uma mensagem dizendo que o
+numero é inválido.
+
+R: let numero = Number(prompt("Digite um Número"))
+          if(numero > 0){
+              numero = Math.sqrt(numero)
+              console.log(numero)
+          }else{
+              console.log("Número não é valido")
+          }
+
+12) Escreva um script para ler um número e informar se ele é divisível por 5.
+
+R: let numero = Number(prompt("Digite um número"))
+          if (numero % 5 == 0){
+              console.log("O número é divisivel por 5")
+          }else{
+              console.log("Programa Finalizado...")
+          }
+
+13) Leia um numero. Se o numero for positivo imprima a raiz quadrada desse número. Do contrário,
+imprima o numero ao quadrado.
+
+R : let numero = Number(prompt("Digite um numero"))
+          if(numero > 0){
+             numero= Math.sqrt(numero)
+             console.log(numero)
+          }else{
+              numero = numero * numero 
+              console.log(numero)
+
+14) Leia o salario de um trabalhador e o valor da prestação de um empréstimo. Se a prestaçao
+for maior que 20% do salário imprima: “empréstimo não concedido”, caso contrario imprima:
+“empréstimo concedido”.
+
+R: let salar,prestEmpret, salarPorcen
+          salar = Number(prompt("Valor do Salario"))
+          prestEmpret = Number(prompt("valor da Prestação"))
+          salarPorcen = 20 / 100 * salar
+          console.log(salarPorcen)
+          if(salarPorcen < prestEmpret){
+           console.log("empréstimo não concedido")
+          }else{
+              console.log("empréstimo concedido")
+          }
+
+15) Desenvolva um programa que recebe do usuário o placar de um jogo de futebol (os gols de cada time) e 
+informe se o resultado foi um empate, a vitória do primeiro time ou do segundo time. 
+
+R: let time1, time2
+          time1 = prompt("Quantidade de gols na Partida pelo time 1")
+          time2 = prompt("Quantidade de gols na Partida pelo time 2")
+          if(time1 > time2){
+              console.log("Time 1 Ganhou")
+          }else if(time2 > time1){
+              console.log("Time 2 Ganhou")
+          }else{
+            console.log("Empate")
+          }
+
+16) Desenvolva um programa que receba do usuário a sua idade e informe a situação de voto dele ("Não precisa votar", "Voto opcional", "Voto obrigatório").
+
+R: let idade = prompt("Digite uma Idade")
+          if( idade >= 18 && idade < 70){
+              console.log("Votar e Obrigatorio")
+          }else if(idade > 70 ){
+              console.log("Não e Obrigatorio")
+          }else if(idade >= 16 || idade < 18){
+              console.log("Votar e Opcional")
+          }
+
+18) Para doar sangue é necessário ter entre 18 e 67 anos. Faça um script que pergunte a idade de uma pessoa e diga se ela pode doar sangue ou não. 
+Use o operador lógicos OU (||).
+
+R: let  idade = prompt("Digite a idade")
+        if(idade >= 18 && idade < 67 ){
+            console.log("Pode doar sangue")
+        }else{
+            console.log("Não pode doar sangue")
+        }
+
+
+
+
+
+
+
+
+
+
 
