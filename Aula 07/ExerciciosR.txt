@@ -183,6 +183,105 @@ R: let  idade = prompt("Digite a idade")
             console.log("Não pode doar sangue")
         }
 
+19) Usando o comando switch, escreva um programa que leia um inteiro entre 1 e 7 e
+imprima o dia da semana correspondente a este numero. Isto é, domingo se for 1, segunda-feira se for 2, e assim por diante.
+
+R: let valor =Number(prompt("Digite de 1 ate 7"))
+        switch (valor) {
+            case 1:
+            console.log("Domingo")
+                break;
+            case 2:
+            console.log("Segunda")
+                break;
+            case 3:
+            console.log("Terça")
+                break;
+            case 4:
+            console.log("Quarta")
+                break;
+            case 5:
+            console.log("Quinta")
+                break;
+            case 6:
+            console.log("Sexta")
+                break;
+            case 7:
+            console.log("Sabado")
+                break;
+            default:
+            console.log("Valor não identificado")
+                break;
+        }
+
+20) Usando o comando switch, escreva um programa que leia um inteiro entre 1 e 12 e
+imprima o mês correspondente a este numero. Isto é, Janeiro se for 1, Fevereiro se 2, e
+assim por diante.
+
+R: let valor =Number(prompt("Digite de 1 ate 12"))
+        switch (valor) {
+            case 1:
+            console.log("Janeiro")
+                break;
+            case 2:
+            console.log("Fevereiro")
+                break;
+            case 3:
+            console.log("Março")
+                break;
+            case 4:
+            console.log("Abril")
+                break;
+            case 5:
+            console.log("Maio")
+                break;
+            case 6:
+            console.log("Junho")
+                break;
+            case 7:
+            console.log("Julho")
+                break;
+            case 8:
+            console.log("Agosto")
+                break;
+            case 9:
+            console.log("Setembro")
+                break;
+            case 10:
+            console.log("Outubro")
+                break;
+            case 11: 
+            console.log("Novembro")
+                break;
+            case 12:
+            console.log("Dezembro")
+                break;
+            default:
+            console.log("Valor não identificado")
+                break;
+
+21) Usando o comando switch, faça um script que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. 
+Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+
+R: let periodo =Number (prompt("Em qual periodo você estuda? \n (1) M-Matutino \n (2) V-Vespertino \n (3) N-Noturno "))
+        let m,v,n
+        m = 1
+        v = 2
+        n = 3
+        switch (periodo) {
+            case 1:
+            console.log("Bom Dia!")
+                break;
+            case 2:
+            console.log("Boa Tarde!")
+                break;
+            case 3:
+            console.log("Boa Noite!")
+                break;
+            default:
+            console.log("Valor Desconhecido")
+                break;
+
 
 
 
