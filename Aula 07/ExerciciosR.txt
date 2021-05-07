@@ -18,7 +18,7 @@ console.log(null === +"\n0\n") False
 3) Escreva um script que receba uma valor A, verifique se o valor A é maior que 10 e
 mostre na tela "O valor A é maior que 10". 
 
-R:  let valorA = prompt("Digite o Valor de A")
+R:  let valorA = +prompt("Digite o Valor de A")
             if(valorA > 10  ) {
                console.log("O Valor e Maior que 10") 
             }
@@ -38,7 +38,6 @@ R: let valor = prompt("Digite um valor")
 "O número é par" senão mostre "O número é ímpar".
 
 R : let valor = prompt("Digite um valor")
-        let total = valor/2
         if (valor%2 == 0 ) {
             console.log("O número é par")
         }else {
@@ -82,7 +81,7 @@ R: let resultado, a, b
         a = 1
         b = 1
 
-     a + b < 4 ? resultado = "Abaixo" : resultado = "Acima"
+     a + b < 4 ? resultado = ("Abaixo") : resultado = ("Acima")
 
     console.log(resultado)
 
@@ -96,7 +95,7 @@ R:let l1,l2,l3
             if ( l1 == l2 && l1 == l3){
                 console.log("Triângulo Equilatero")
             } else if ( l2 == l3 || l1 == l3 || l2 == l1 ){
-                console.log("Triângulo Iscaleno")
+                console.log("Triângulo Isoceles")
             } else if(l1 != l2 && l2 != l3 && l3 != l1) {
                 console.log("Triângulo Escaleno")
             }
@@ -108,7 +107,7 @@ numero é inválido.
 R: let numero = Number(prompt("Digite um Número"))
           if(numero > 0){
               numero = Math.sqrt(numero)
-              console.log(numero)
+              console.log(numero.tofixed(2))
           }else{
               console.log("Número não é valido")
           }
@@ -263,19 +262,17 @@ R: let valor =Number(prompt("Digite de 1 ate 12"))
 21) Usando o comando switch, faça um script que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. 
 Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
 
-R: let periodo =Number (prompt("Em qual periodo você estuda? \n (1) M-Matutino \n (2) V-Vespertino \n (3) N-Noturno "))
+R: let periodo =Number (prompt("Em qual periodo você estuda? \n  M-Matutino \n  V-Vespertino \n  N-Noturno "))
         let m,v,n
-        m = 1
-        v = 2
-        n = 3
+        
         switch (periodo) {
-            case 1:
+            case "M":
             console.log("Bom Dia!")
                 break;
-            case 2:
+            case "V":
             console.log("Boa Tarde!")
                 break;
-            case 3:
+            case "N":
             console.log("Boa Noite!")
                 break;
             default:
