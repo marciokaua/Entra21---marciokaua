@@ -1,7 +1,65 @@
 1) // While
         let i = 0
-        let o = "Bom dia"
         while(i < 10 ){
-            console.log(i)
-            console.log(o)
+            console.log(i + "Olá Mundo")
             i++
+    // do - while
+        let i = 0
+        do{
+            console.log(i + " Olá Mundo!)
+            i++
+        } while (i < 10)
+    // For 
+    for (let i = 0; i < 10; i++) {
+            console.log(i + " Olá Mundo!")  
+        } 
+
+2) // While
+ let contador = 1
+        while(contador < 11){
+            console.log(`Executando pela ${+contador} vez...`)
+            contador++
+    // do - while
+    let contador = 1
+       do{
+        console.log(`Executando pela ${+contador} vez...`)
+        contador++
+       }while(contador < 11)
+    // For
+    <script>
+   for (let contador = 1; contador < 11; contador++) {
+    console.log(`Executando pela ${+contador} vez...`)
+       }
+    
+3) for (let contador = 10; contador > -1; contador--) {
+    console.log(`Executando pela ${+contador} vez...`)
+       }
+
+4)for (let contador = 0; contador < 3; contador++) {
+    let num1 = Number(prompt("Digite um valor"))
+    let num2 = Number(prompt("Digite um valor"))
+    let resul = num1 - num2
+    console.log(`${num1} - ${num2} = ${resul}`)
+       }
+
+5) for (let i = 0; i < 100010; i+= 1000) {
+        console.log(i)
+    }
+
+6) let soma,media,num1,num2,num3,num4,num5
+    num1 = Number(prompt("Digite um valor"))
+    num2 = Number(prompt("Digite um valor"))
+    num3 = Number(prompt("Digite um valor"))
+    num4 = Number(prompt("Digite um valor"))
+    num5 = Number(prompt("Digite um valor"))
+        soma = num1 + num2 + num3 + num4 + num5
+        media = soma /5
+        console.log("Soma: " + soma)
+        console.log("Média: " + media.toFixed(2))
+
+7) let n = Number(prompt("Digite o valor de N"))
+for (let i = 1 ; i < n ; i+= 2) {
+    console.log(i)
+}
+
+8)
