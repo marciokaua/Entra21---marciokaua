@@ -34,6 +34,7 @@
 3) for (let contador = 10; contador > -1; contador--) {
     console.log(`Executando pela ${+contador} vez...`)
        }
+       console.log("FIM!")
 
 4)for (let contador = 0; contador < 3; contador++) {
     let num1 = Number(prompt("Digite um valor"))
@@ -62,4 +63,26 @@ for (let i = 1 ; i < n ; i+= 2) {
     console.log(i)
 }
 
-8)
+8)let numTabu = Number(prompt("Digite um numero"))
+       for (let i = 1; i <= 10; i++) {
+          console.log(`${numTabu} * ${i} = ${numTabu*i}`)           
+       }
+
+9)for (let i = 1; i <= 5; i++) {
+        let numTabu = Number(prompt("Digite um numero"))
+          if(numTabu < 0){
+        console.log("Numero negativo " + numTabu)
+         }else{
+        console.log("Numero Positivo " + numTabu)
+          }
+       }
+ 10) for (let i = 1; i <= 10; i++) {
+        let num = Number(prompt("Digite um numero"))
+           if(num%2 == 0){
+               console.log("Numero Par "+ i)
+           }else{
+               console.log("Numero Impar "+ i)
+           }
+       }
+
+11) 
