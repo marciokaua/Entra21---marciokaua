@@ -1,0 +1,19 @@
+1
+let cont = []
+          for (let i = 0; i < 10; i++) {
+              let achou = +prompt("Digite um numero")
+              if (achou %2 ==0) {
+                  console.log(+achou)
+              }
+          }
+
+2
+
+let numeros = []
+          for (let i = 0; i <= 5; i++) {
+            numeros[i] = +prompt("Digite um número")
+            console.log(numeros.length)
+        }
+
+3
+
