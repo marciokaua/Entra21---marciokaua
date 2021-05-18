@@ -1,0 +1,103 @@
+1) function ehPositivo(numero){
+            return numero > 0
+        }
+        let numero = +prompt("Digite um Número")
+        console.log(ehPositivo(numero))
+
+2) function minimo(a , b){
+            if(a < b){
+                return a 
+            }else {
+                return b
+            }
+        }
+        let a = +prompt("Digite o valor de A")
+        let b = +prompt("Digite o valor de B")
+        console.log(minimo(a,b))
+
+3) function potencia(a,b){
+            return a**b
+        }
+        let a = +prompt("Digite um Número")
+        let b = +prompt("Digite a potencia")
+        console.log(potencia(a,b))
+
+4) function media(nota1,nota2,nota3){
+            return (nota1+nota2+nota3) /3
+         }
+         
+        let nota1 = +prompt("Digite a nota 1")
+        let nota2 = +prompt("Digite a nota 2")
+        let nota3 = +prompt("Digite a nota 3")
+        console.log(media(nota1,nota2,nota3).toFixed(2))
+
+5) for(let i = 0; i < 4; i++) {
+        function boletim(media){
+    if (media < 0 || media > 10) {
+        console.log("Valor inválido")
+    } else if (media < 5 && media >= 0) {
+        console.log("Conceito D")
+    } else if (media < 7) {
+        console.log("Conceito C")
+    } else if (media < 9) {
+        console.log("Conceito B")
+    } else {
+        console.log("Conceito A")
+    }
+ }
+}
+let media = Number(prompt("Digite a média"))
+console.log(boletim(media))
+
+6) function mediaPeso(pesoIdeal,altura){
+switch (sexo) {
+    case "M":
+        pesoIdeal = (72.7 * altura) - 58 
+        console.log(pesoIdeal.toFixed(2))
+        break
+    case "F":
+        pesoIdeal =  (62.1 * altura) - 44.7
+        console.log(pesoIdeal.toFixed(2))
+        break
+    default:
+        console.log("Opção inválida")
+}
+}
+    let pesoIdeal
+    let altura = +prompt("Digite sua altura"),
+    sexo = prompt("Digite seu sexo (M - Masculino|F - Feminino)").toUpperCase()
+    console.log(mediaPeso(pesoIdeal,altura))
+
+8)  function idadeAnos(anos){
+         let retornoAnosDias
+           retornoAnosDias = anos*365
+           return retornoAnosDias
+       }
+       function idadeMeses(meses){
+            let retornoMesesDias
+            retornoMesesDias=meses*30
+            return retornoMesesDias
+       }
+       function idadeDias(dias){
+           let retornoDias
+           retornoDias=dias*1
+           return retornoDias
+       }
+       let anos=+prompt("Digite a idade em anos")
+       let meses=+prompt("Digite a idade em meses")
+       let dias=+prompt("Digite a idade em dias")
+       let resultado = idadeAnos(anos)+idadeMeses(meses)+idadeDias(dias)
+       console.log(resultado)
+
+9) function divisores(num){
+             let div = 0
+            for (let i = num; i > 0; i--) {
+                if(num %i==0)div++
+            }
+            return div
+       }
+       let num
+       num =+prompt("Digite um valor")
+       console.log(divisores(num))
+
+10) 
