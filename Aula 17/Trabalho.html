@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        repeticao:
+        while (true) {
+        let monstrarOpcoes = prompt (" 1) Cadastrar aluno \n 2) Editar informações do aluno \n 3) Cadastrar notas de um aluno \n 4) Listar alunos \n 0) Sair")
+        switch (monstrarOpcoes) {
+            case "0":
+                alert("Finalizando Programa...")
+                break repeticao
+            case "1":
+                cadastroNome(),matriculaAluno()
+                break;
+            case "2":
+                editarNome(),editarMatricula()
+                break;
+            case "3":
+                    cadNotasAluno()
+                break;
+            case "4":
+                    matriz()
+            default: 
+        }
+        }
+    </script>
+</body>
+</html>
