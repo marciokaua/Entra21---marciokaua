@@ -1,0 +1,16 @@
+body {
+    background-color: rgba(64, 64, 74);
+    text-align: center;
+}
+
+.titulo {
+    color: greenyellow;
+}
+
+.fonte {
+    color: white;
+}
+
+a {
+    color: greenyellow;
+}

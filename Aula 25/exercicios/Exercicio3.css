@@ -1,0 +1,34 @@
+body {
+    background-color: gray;
+}
+
+.barra-preta {
+    border: 1px solid black;
+}
+
+.Titulo {
+    color: blue;
+    text-align: center;
+}
+
+.barra-cinza {
+   border: 1px solid white; 
+   opacity: 0.3;
+}
+
+img {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textoCentral {
+    text-align: center;
+   font-size: x-large;
+}
+
+.autor {
+    text-align: center;
+   font-size: x-large;
+}
