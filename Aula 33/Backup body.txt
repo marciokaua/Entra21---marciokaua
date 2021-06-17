@@ -1,0 +1,21 @@
+<div class="main">
+        <header class="inicio">
+            <span class="logo">
+                <img src="Trabalho/images/inicial.jpg" alt="">
+            </span>
+            <h1 class="title">Meu Plano de viagens</h1>
+        </header>
+        <br>
+    </div>
+    <div class="wrapper">
+        <nav class="menu">
+            <ul class="listm">
+                <li>
+                    <a href="">Estado Unidos</a>
+                </li>
+            </ul> 
+        </nav>
+        <section>
+            <p>teste</p>
+        </section>
+    </div>
