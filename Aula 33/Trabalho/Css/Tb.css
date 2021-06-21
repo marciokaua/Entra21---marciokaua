@@ -15,17 +15,15 @@ img{
 }
 
 
-.main { 
 
-
-}
 
 .inicio {
     text-align: center;
     padding: 10px;
 }
 .main {
-    display: block;  
+    display: block; 
+
 }
 
 .logo img {
@@ -41,15 +39,73 @@ img{
     background-color: whitesmoke;
     padding: 30px;
     text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
 }
 
 .listm{
     list-style: none;
-    
+    color:gray;
+   background-color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px; 
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    width: 100%;
+
+}
+
+.paises{
+    text-decoration: none;
+    color: gray;
 }
 
 .wrapper {
     width: 80%;
     margin: auto;
     background: rgb(253, 253, 253);
+    text-align: center;
+    
+
+}
+
+.maintext {
+ display: block;
+ text-align: center;
+ 
+}
+
+.text {
+    font-family: 'Dancing Script', cursive;
+   font-size: x-large;
+    text-align: center;
+}
+
+.titleCt {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+}
+
+.line{
+    margin: 40px 0 ;
+    color: black;
+}
+
+.imag img{
+    width: 80%;
+}
+
+@media (max-width: 780px) {
+    .menu{
+        text-align: center;
+    }
+    .listm {
+        display: block;
+        text-align: center;
+    }
 }
