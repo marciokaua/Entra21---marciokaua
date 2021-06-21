@@ -12,6 +12,7 @@ img{
     text-align: center;
     font-family: 'Dancing Script', cursive;
     font-size: 60px;
+ 
 }
 
 
@@ -23,6 +24,7 @@ img{
 }
 .main {
     display: block; 
+    text-align: center;
 
 }
 
@@ -32,6 +34,8 @@ img{
     padding: 4px;
     display: block;
     box-sizing: border-box;
+    text-align: center;
+    margin: auto;
     
 }
 
@@ -56,6 +60,7 @@ img{
     flex-direction: row;
     gap: 5%;
     width: 100%;
+    justify-content: center;
 
 }
 
@@ -100,12 +105,23 @@ img{
     width: 80%;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 800px) {
     .menu{
         text-align: center;
     }
     .listm {
         display: block;
         text-align: center;
+        padding-left: 0%;
     }
 }
+
+.linkfinal  a{
+    font-family: 'Dancing Script', cursive;
+    font-style: none;
+    font-size: 50px;
+    color: black;
+    text-decoration: none;
+}
+
+
