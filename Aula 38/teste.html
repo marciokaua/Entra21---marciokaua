@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div {
+                height: 200px;
+                width: 300px;
+                background-color: blue;  
+                color: white;              
+            }     
+
+            textarea {
+                height: 200px;
+                width: 300px;
+            }       
+        </style>
+    </head>
+    <body>
+        <div>Digite algo</div>
+    </body>
+    <script>
+        /*
+         1) Crie uma <div> que se torne em uma <textarea> quando clicada.
+           A <textarea> permite editar o HTML da <div>
+           Quando o usuário pressionar Enter ou sair da <textarea>, ela
+           volta a ser uma <div> com o conteúdo alterado na <textarea>
+        */
+        let div = document.querySelector("div"),
+            textarea
+        
+        div.addEventListener("click", () => {
+            textarea = document.createElement("textarea")
+            textarea.value = div.textContent
+            textarea.addEventListener("blur", () => {
+                div.innerHTML = textarea.value
+                textarea.replaceWith(div)
+            })
+
+            textarea.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") textarea.blur()
+            })
+
+            div.replaceWith(textarea)
+            textarea.focus()
+        })
+    </script>
+</html>
