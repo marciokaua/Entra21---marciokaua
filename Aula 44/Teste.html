@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Agenda{
+            constructor() {
+                this.listaPessoas = []
+            }
+
+            armazenarPessoa(nome, telefone) {
+                console.log(this.listaPessoas)
+                this.listaPessoas.push({nome, telefone})
+            }
+
+            imprimePessoas() {
+                for (let pessoa of this.listaPessoas) {
+                    console.log(`Nome: ${pessoa.nome} | Telefone: ${pessoa.telefone}`)
+                }
+            }
+            removePessoa(){
+                for(let remove of this.listaPessoas){
+                let x = +prompt("Digite o numero da pessoa a ser excluida")
+                listaPessoas.splice(x,10,0)
+                console.log(imprimePessoas)
+                }
+            }
+        }
+        let agenda = new Agenda()
+        agenda.armazenarPessoa("João", "(47)99999-9999")
+        agenda.armazenarPessoa("Maria","(47)99999-9999")
+        agenda.armazenarPessoa("Lucas","(47)99999-9999")
+        agenda.imprimePessoas()
+        agenda.removePessoa()
+         
+    </script>
+</body>
+</html>
