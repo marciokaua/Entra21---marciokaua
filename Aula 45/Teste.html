@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Imovel {
+            constructor(endereco,preco){
+                this.endereco = endereco
+                this.preco = preco
+            }
+        }
+        class Novo extends Imovel {
+            #adicional
+            constructor(endereco, preco, adicional){
+                super(endereco, preco)
+                this.#adicional = adicional 
+            }
+
+            get adicional() {
+                return this.#adicional
+            }
+
+            set adicional(valor) {
+                this.#adicional = valor
+            }
+
+            calculoTotal(){
+                return this.preco + this.#adicional
+            }
+        }
+        class Velho extends Imovel{
+            #desconto
+            constructor(endereco,preco, desconto){
+                super(endereco, preco)
+                this.#desconto = desconto
+            }
+
+            get desconto(){
+                return this.#desconto
+            }
+            set desconto(valor){
+                this.#desconto = valor
+            }
+            
+            calculoTotal(){
+                return this.preco - this.#desconto
+
+            }
+        }
+
+        let casa1 = new Imovel ("Timbó", 5000)
+        let descont = new Velho ("Indaial",5000,300)
+        let apartamento = new Novo ("São Paulo",10000,3000)
+
+    </script>
+</body>
+
+</html>

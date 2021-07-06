@@ -1,0 +1,280 @@
+Herança-Prototypal
+
+1) Analise o código abaixo e informe quais valores serão apresentados no processo
+
+        let animal = {
+            pula: null
+        }
+
+        let coelho = {
+            __proto__: animal,
+            pula: true
+        }
+ 
+ R:console.log(coelho.pula) true -> sempre vai pegar a propriedade que esta mais proxima
+   delete coelho.pula True
+   console.log(coelho.pula) Null -> agora vai pegar do pai pois esta deletando o que tem na mesma chave
+   delete animal.pula
+   console.log(coelho.pula) Undefined -> deletou todos os .pula então da valor indefinido
+
+2) Dado os seguintes objetos:
+
+let cabeca = {
+            oculos: 1
+        }
+
+        let mesa = {
+            caneta: 3
+        }
+
+        let cama = {
+            lenco: 1,
+            travesseiro: 2
+        }
+
+        let bolso = {
+            dinheiro: 200
+        }
+
+- Use __proto__ para atribuir prototypes na seguinte ordem: bolso -> cama -> mesa -> cabeca.
+Testes:
+console.log(bolso.caneta) // 3
+console.log(cama.oculos) // 1
+console.log(mesa.dinheiro) // undefined
+
+R:      let cabeca = {
+            oculos: 1
+        }
+
+        let mesa = {
+            __proto__:cabeca,
+            caneta: 3
+        }
+
+        let cama = {
+            __proto__:mesa,
+            lenco: 1,
+            travesseiro: 2
+        }
+
+        let bolso = {
+            __proto__:cama,
+            dinheiro: 200
+        }
+
+3)      Nesse problema temos dois hamster: Hamtaro e Fofuxo. Os dois herdam do objeto hamster.
+        Quando alimentamos um deles, o outro também fica cheio. Por que? Como consertar isso?
+        let hamster = {
+            estomago = [],
+
+            comer(comida) {
+                this.estomago.push(comida)
+            }
+        }
+
+        let hamtaro = {
+            __proto__ = hamster
+        }
+
+        let fofuxo = {
+            __proto__ = hamster
+        }
+
+        hamtaro.comer("Maçã")
+        console.log(hamtaro.estomago) // Maçã
+
+        console.log(fofuxo.estomago) // Maçã
+        */
+R:          let hamster = {
+            estomago : [],
+
+            comer(comida) {
+                this.estomago.push(comida)
+            }
+        }
+
+        let hamtaro = {
+            __proto__ : hamster,
+            estomago: [] -> um para cada um dos hamster assim pegando de cada chave
+        }
+
+        let fofuxo = {
+            __proto__ :hamster,
+            estomago: [] -> tem um para cada um pois pega o mais proximo 
+        }
+
+        hamtaro.comer("Maçã")
+        fofuxo.comer("Abacaxi")
+        console.log(hamtaro.estomago) 
+
+        console.log(fofuxo.estomago)
+
+Herança
+
+1) Corrija o script a seguir para que ele funcione
+        class Animal {
+            constructor(nome) {
+                this.nome = nome
+            }            
+        }
+
+        class Coelho extends Animal {
+            constructor(nome) {
+                super(nome) -> só colocar o super 
+                this.criadoEm = Date.now()
+            }
+        }
+
+        let coelho = new Coelho("Coelho Branco")
+        alert(coelho.nome)
+
+2) Crie uma subclasse de Relogio que adiciona o parametro de precisao 
+        (O numero em ms entre os ticks). 
+        class Relogio {
+            constructor(formato) {
+                this.formato = formato
+            }
+
+            renderizar() {
+                let data = new Date()
+
+                let horas = data.getHours()
+                if (horas < 10) horas = "0" + horas
+
+                let minutos = data.getMinutes()
+                if (minutos < 10) minutos = "0" + minutos
+
+                let segundos = data.getSeconds()
+                if (segundos < 10) segundos = "0" + segundos
+
+                let resultado = this.formato
+                    .replace("h", horas)
+                    .replace("m", minutos)
+                    .replace("s", segundos)
+                
+                console.log(resultado)
+            }
+
+            parar() {
+                clearInterval(this.timer)
+            }
+
+            comecar() {
+                this.renderizar()
+                this.timer = setInterval(() => this.renderizar(), 1000)
+            }
+        }
+
+        let timer1 = new Relogio("h:m:s")
+        timer1.comecar()
+
+
+    R:      class Relogio {
+            constructor(formato) {
+                this.formato = formato
+            }
+
+            renderizar() {
+                let data = new Date()
+
+                let horas = data.getHours()
+                if (horas < 10) horas = "0" + horas
+
+                let minutos = data.getMinutes()
+                if (minutos < 10) minutos = "0" + minutos
+
+                let segundos = data.getSeconds()
+                if (segundos < 10) segundos = "0" + segundos
+
+                let resultado = this.formato
+                    .replace("h", horas)
+                    .replace("m", minutos)
+                    .replace("s", segundos)
+
+                console.log(resultado)
+            }
+
+            parar() {
+                clearInterval(this.timer)
+            }
+
+            comecar() {
+                this.renderizar()
+                this.timer = setInterval(() => this.renderizar(), 1000)
+            }
+        }
+
+        class RelogioTick extends Relogio {  -> sobre escrever o pai para poder colocar o tick em 5 segundos !
+            constructor(formato, tick) {
+                super(formato)
+                this.tick = tick
+            }
+
+            comecar() {
+                super.renderizar()
+                this.timer = setInterval(() => super.renderizar(), this.tick)
+            }
+        }
+
+
+        let timer1 = new RelogioTick("h:m:s", 5000)
+        timer1.comecar()
+
+
+ 3) Crie a classe Imovel, que possui um endereço e um preço.
+        a. crie uma classe Novo, que herda Imovel e possui um adicional no preço. Crie
+        métodos de acesso e impressão deste valor adicional.        
+        b. crie uma classe Velho, que herda Imovel e possui um desconto no preço. Crie
+        métodos de acesso e impressão para este desconto.
+        
+        Ambas as classes Novo e Velho devem implementar um método calculaTotal() que informa
+        o valor com o adicional ou com o desconto.
+
+R:  class Imovel {
+            constructor(endereco,preco){
+                this.endereco = endereco
+                this.preco = preco
+            }
+        }
+        class Novo extends Imovel {
+            #adicional -> Deixa o valor como privado
+            constructor(endereco, preco, adicional){
+                super(endereco, preco)
+                this.#adicional = adicional 
+            }
+
+            get adicional() { -> pega o valor privado inserido ao lado
+                return this.#adicional -> retorna o valor privado 
+            }
+
+            set adicional(valor) { -> deixa alterar o valor privado por qualquer metodo 
+                this.#adicional = valor -> seleciona o valor 
+            }
+
+            calculoTotal(){
+                return this.preco + this.#adicional
+            }
+        }
+        class Velho extends Imovel{
+            #desconto
+            constructor(endereco,preco, desconto){
+                super(endereco, preco)
+                this.#desconto = desconto
+            }
+
+            get desconto(){
+                return this.#desconto
+            }
+            set desconto(valor){
+                this.#desconto = valor
+            }
+            
+            calculoTotal(){
+                return this.preco - this.#desconto
+
+            }
+        }
+
+        let casa1 = new Imovel ("Timbó", 5000)
+        let descont = new Velho ("Indaial",5000,300)
+        let apartamento = new Novo ("São Paulo",10000,3000)
